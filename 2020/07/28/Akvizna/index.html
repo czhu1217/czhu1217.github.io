@@ -22,28 +22,35 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ChickenFeet&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="DMOJ | COCI18c4p5 | Akvizna Problem Statementhttps:&#x2F;&#x2F;dmoj.ca&#x2F;problem&#x2F;coci18c4p5  SolutionThis is a DP problem related with dividing an array into segments.  The problem itself is almost identical to S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Akvizna">
+<meta property="og:url" content="http://yoursite.com/2020/07/28/Akvizna/index.html">
 <meta property="og:site_name" content="ChickenFeet&#39;s Blog">
+<meta property="og:description" content="DMOJ | COCI18c4p5 | Akvizna Problem Statementhttps:&#x2F;&#x2F;dmoj.ca&#x2F;problem&#x2F;coci18c4p5  SolutionThis is a DP problem related with dividing an array into segments.  The problem itself is almost identical to S">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-28T23:23:42.000Z">
+<meta property="article:modified_time" content="2020-07-29T00:40:21.964Z">
 <meta property="article:author" content="Cindy Zhu">
+<meta property="article:tag" content="dp">
+<meta property="article:tag" content="binary search">
+<meta property="article:tag" content="alien&#39;s trick">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/07/28/Akvizna/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>ChickenFeet's Blog</title>
+  <title>Akvizna | ChickenFeet's Blog</title>
   
 
 
@@ -273,9 +280,10 @@ mjx-container[display="true"] + br {
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -291,10 +299,9 @@ mjx-container[display="true"] + br {
       <meta itemprop="name" content="ChickenFeet's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/28/Akvizna/" class="post-title-link" itemprop="url">Akvizna</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Akvizna
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -327,7 +334,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="DMOJ-COCI18c4p5-Akvizna"><a href="#DMOJ-COCI18c4p5-Akvizna" class="headerlink" title="DMOJ | COCI18c4p5 | Akvizna"></a>DMOJ | COCI18c4p5 | Akvizna</h1><hr>
+        <h1 id="DMOJ-COCI18c4p5-Akvizna"><a href="#DMOJ-COCI18c4p5-Akvizna" class="headerlink" title="DMOJ | COCI18c4p5 | Akvizna"></a>DMOJ | COCI18c4p5 | Akvizna</h1><hr>
 <h3 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h3><p><a href="https://dmoj.ca/problem/coci18c4p5" target="_blank" rel="noopener">https://dmoj.ca/problem/coci18c4p5</a></p>
 <hr>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>This is a DP problem related with dividing an array into segments. </p>
@@ -342,21 +349,28 @@ dp[k]+\frac{i-k}{i} \geq dp[j] + \frac{i-j}{i} \\
 <p>Source Code:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// alien's trick, monotonic deque, binary search</span></span><br><span class="line"><span class="comment">//coci18c4p5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> ld;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ll&gt; vi;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ld&gt; vd;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ll&gt; vl;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;pi&gt; vpi;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;pl&gt; vpl;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, a, b) for (ll i=a; i&lt;=(b); i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F0R(i, a) for (ll i=0; i&lt;(a); i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORd(i,a,b) for (ll i = (b)-1; i &gt;= a; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F0Rd(i,a) for (ll i = (a)-1; i &gt;= 0; i--)</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sz(x) (ll)(x).size()</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lb lower_bound</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ub upper_bound</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> all(x) x.begin(), x.end()</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ins insert</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MM = <span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> ld lmt = <span class="number">1e-12</span>;</span><br><span class="line"><span class="keyword">int</span> n,k,cnt[MM];</span><br><span class="line"><span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; dq;</span><br><span class="line">ld dp[MM];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ld <span class="title">slope</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> (dp[x] - dp[y]) / (x - y);</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(ld cost)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    dq.clear();dq.pb(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;++i)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">while</span>(dq.size()&gt;=<span class="number">2</span>&amp;&amp;slope(dq[<span class="number">0</span>], dq[<span class="number">1</span>])&gt;<span class="number">1.0</span>/i) dq.pop_front();</span><br><span class="line">        <span class="keyword">int</span> best = dq[<span class="number">0</span>];</span><br><span class="line">        dp[i] = dp[best] + (ld)(i - best) / i - cost,cnt[i] = cnt[best] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(dq.size()&gt;=<span class="number">2</span>&amp;&amp;slope(dq[dq.size()<span class="number">-2</span>], dq[dq.size()<span class="number">-1</span>])&lt;slope(dq[dq.size()<span class="number">-1</span>], i)) dq.pop_back();</span><br><span class="line">        dq.pb(i);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> cnt[n];</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    ld l, r, mid;</span><br><span class="line">    l = <span class="number">0</span>,r = <span class="number">1e6</span>;</span><br><span class="line">    <span class="keyword">while</span>(r-l&gt;=lmt){</span><br><span class="line">        mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(check(mid)&gt;=k)</span><br><span class="line">            l = mid;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            r = mid;</span><br><span class="line">    }</span><br><span class="line">    check(l);</span><br><span class="line">    <span class="keyword">double</span> ans= dp[n] + k * mid ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.9f\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/dp/" rel="tag"># dp</a>
+              <a href="/tags/binary-search/" rel="tag"># binary search</a>
+              <a href="/tags/alien-s-trick/" rel="tag"># alien's trick</a>
+          </div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -409,6 +423,7 @@ dp[k]+\frac{i-k}{i} \geq dp[j] + \frac{i-j}{i} \\
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DMOJ-COCI18c4p5-Akvizna"><span class="nav-number">1.</span> <span class="nav-text">DMOJ | COCI18c4p5 | Akvizna</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Statement"><span class="nav-number">1.0.1.</span> <span class="nav-text">Problem Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">1.0.2.</span> <span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
