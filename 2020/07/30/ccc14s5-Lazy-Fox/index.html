@@ -30,7 +30,7 @@
 <meta property="og:description" content="Problem Statementhttps:&#x2F;&#x2F;dmoj.ca&#x2F;problem&#x2F;ccc14s5  SolutionSubtask 1&amp;2To get 60% of the mark, all we need to do is let k be the number of treats the fox can collect, then for every node i, let dp[k">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-30T17:36:49.000Z">
-<meta property="article:modified_time" content="2020-07-30T18:55:16.886Z">
+<meta property="article:modified_time" content="2020-07-30T20:41:49.216Z">
 <meta property="article:author" content="Cindy Zhu">
 <meta property="article:tag" content="dp">
 <meta property="article:tag" content="ccc">
@@ -311,7 +311,7 @@ mjx-container[display="true"] + br {
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-30 13:36:49 / Modified: 14:55:16" itemprop="dateCreated datePublished" datetime="2020-07-30T13:36:49-04:00">2020-07-30</time>
+              <time title="Created: 2020-07-30 13:36:49 / Modified: 16:41:49" itemprop="dateCreated datePublished" datetime="2020-07-30T13:36:49-04:00">2020-07-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -340,7 +340,7 @@ mjx-container[display="true"] + br {
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range n:</span><br><span class="line">    <span class="keyword">if</span>(j != i &amp;&amp; dp[k<span class="number">-1</span>][j] &gt; <span class="number">0</span> &amp;&amp; distance(i, j) &lt; dp[k<span class="number">-1</span>][j])</span><br><span class="line">		dp[k][i] = max(dp[k][i], distance(i, j))</span><br></pre></td></tr></table></figure>
 <p>time complexity: $O(N^3)$</p>
 <h4 id="Subtask-3"><a href="#Subtask-3" class="headerlink" title="Subtask 3"></a>Subtask 3</h4><p>The solution can be further optimized by noticing that there’s no specific relationship between the nodes, but there is a relationship between the edges since the length of the edges are the determining factor. When at a node, there is no point looping through nodes that are further than the current limit. To avoid extra computation, we can loop base on the length of edges. This works because the best answer for the two nodes starting from a specific edge builds up only based on edges shorter than it. </p>
-<p>To do this, we store all pairs of nodes in a vector and sort them by edge length. </p>
+<p>To do this, we store all pairs of nodes in a vector and sort them by increasing edge length. </p>
 <p>Then for each pair a, b:</p>
 <script type="math/tex; mode=display">
 dp[a] = max(dp[a], dp[b]+1)</script><p>Be careful that the case where multiple pairs have the same edge length also need to be dealt with.</p>
