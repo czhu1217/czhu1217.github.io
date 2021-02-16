@@ -149,7 +149,7 @@ html, body {overflow-x: hidden;}
 }
 
 .footer h3, .footer h4 {font-family: "Source Sans Pro", Arial, sans-serif;}
-.facebook, .linkedin, .pinterest, .email-icon {padding: 31%;}
+.facebook, .linkedin, .pinterest, .email-icon, .github, .dmoj {padding: 31%;}
 .footer img {
 	background-color: #8A8A8A;
 	-webkit-transition: all 200ms ease-out;
