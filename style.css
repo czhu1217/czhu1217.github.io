@@ -5,7 +5,7 @@ html, body {overflow-x: hidden;}
     position: absolute;
     width: 100%;
     padding: 10px 0px;
-    background: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2)) ;
+    background: rgba(255, 255, 255, 0) ;
     z-index: 999;
 }
 
@@ -30,7 +30,7 @@ html, body {overflow-x: hidden;}
 }
 
 .primary-nav a {
-	color: white;
+	color: black;
 	padding-bottom: 5px;
 	-webkit-transition: border 50ms linear;
 	-moz-transition: border 50ms linear;
@@ -48,12 +48,12 @@ html, body {overflow-x: hidden;}
 /******** HOME PAGE ********/
 /* Main banner */
 .main {
-	background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(./images/architecture-2178604_1920-main1.jpg); /* Browser prefixes*/
+	/* background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url(./images/architecture-2178604_1920-main1.jpg); Browser prefixes */
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	padding: 17% 0; /* Center contents within the container, make background image cover*/
-	color: white;
+	color: black;
 }
 
 .entry-banner h1 {font-family: "Source Sans Pro", Arial, sans-serif;}
@@ -208,3 +208,11 @@ html, body {overflow-x: hidden;}
 	background-color: #464646;
 	color: white;
 }
+
+.background {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 0;
+  }

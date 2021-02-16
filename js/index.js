@@ -19,6 +19,12 @@ $(document).ready(function(){
 	});
 });
 window.onload = function(){
+	Particles.init({
+		selector: '.background',
+		connectParticles: true,
+		color: '#5e81ac'
+	  });
+	  
 	//Navigation
 	$('.primary-nav').css('height', $('.logo').height());
 	$('.primary-nav li').css('margin-top', ($('.primary-nav').height()-$('.primary-nav li').height())/2 + 'px');
