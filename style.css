@@ -25,7 +25,7 @@ html, body {overflow-x: hidden;}
 .primary-nav li{
     display: inline-block;
     margin: 0px 20px;
-    color: white;
+    color: #fbfbfc;
     font-size: 13pt;
 }
 
@@ -52,14 +52,28 @@ html, body {overflow-x: hidden;}
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-	padding: 17% 0; /* Center contents within the container, make background image cover*/
-	color: black;
+	padding: 15% 0; /* Center contents within the container, make background image cover*/
 }
 
-.entry-banner h1 {font-family: "Source Sans Pro", Arial, sans-serif;}
-#hello {font-size: 28pt;}
-#name {font-size: 100pt;}
-#person-description {font-size: 33pt;}
+.entry-banner h1 {
+	font-family: 'Rubik', sans-serif;
+
+	
+}
+#hello {
+	font-size: 40pt; 
+	font-weight: 500;
+	color: #2E3440;
+}
+#name {
+	font-size: 100pt;	
+	font-weight: 500;
+	color: #2E3440;
+}
+#person-description {
+	font-size: 33pt;
+	color: #5e81ac;
+}
 .banner-buttons .btn-border, .submit-contact .btn-border, .projects .btn-border {
 	background-color: transparent;
 	width: 100%;
@@ -83,7 +97,7 @@ html, body {overflow-x: hidden;}
 
 .about {
 	padding: 3% 0;
-	background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94));
+	/* background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94)); */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -214,5 +228,5 @@ html, body {overflow-x: hidden;}
 	display: block;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	z-index: -999;
   }
