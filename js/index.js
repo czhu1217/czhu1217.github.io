@@ -9,7 +9,6 @@ function navigation(){ //Center navigation bar
 
 $(document).ready(function(){
 	$(".primary-nav a, .navable, .main .btn, .about .btn").on('click', function(e) {
-		e.preventDefault();
     	var hash = this.hash;
     	$('html, body').animate({
     		scrollTop: $(hash).offset().top
