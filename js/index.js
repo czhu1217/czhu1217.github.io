@@ -28,6 +28,9 @@ window.onload = function(){
 	$('.primary-nav').css('height', $('.logo').height());
 	$('.primary-nav li').css('margin-top', ($('.primary-nav').height()-$('.primary-nav li').height())/2 + 'px');
 
+	
+   
+
 	//About section
 	//Determine if the image is larger than the description box - larger screen widths
 	//If the description is smaller than the image, center description instead of image
@@ -62,6 +65,20 @@ window.onload = function(){
 	});
 }
 // END HOME PAGE JS
+
+ // Typed Initiate
+    if ($('.typed-text-output').length == 1) {
+		console.log("okok");
+        var typed_strings = $('.typed-text').text();
+        var typed = new Typed('.typed-text-output', {
+            strings: typed_strings.split(', '),
+            typeSpeed: 100,
+            backSpeed: 20,
+            smartBackspace: false,
+            loop: true
+        });
+    }
+
 
 
 
