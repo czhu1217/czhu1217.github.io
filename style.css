@@ -48,17 +48,17 @@ html, body {
 /* Main banner */
 .main {
 	font-family: 'Rubik', sans-serif;
-	padding: 15% 20% 10% 20%; /* Center contents within the container, make background image cover*/
+	padding: 15% 20% 18% 20%; /* Center contents within the container, make background image cover*/
 }
 #name {
-	font-size: 90pt;	
+	font-size: 70pt;	
 	font-weight: 400;
 	color: #2E3440;
 }
 #person-description, .typed-cursor {
 	font-size: 30pt;
 	font-weight: 400;
-	color: #5e81ac;
+	color: #88c0d0;
 }
 
 .banner-buttons .btn-border:hover, .submit-contact .btn-border:hover, .projects .btn-border:hover {
@@ -97,7 +97,6 @@ html, body {
 	padding: 50px 0;
 }
 
-.facebook, .linkedin, .email-icon, .github, .dmoj {padding: 50% 31% 31% 0;}
 .footer img {
 	background-color: #8A8A8A;
 	color: white;
@@ -138,10 +137,31 @@ html, body {
 
   }
 
-.row{
-	padding: 6%;
-}
 
 .icon{
 	margin: 3% 3% 0 0;
+	color: #5e81ac;
+	transition: 0.5s;
+}
+
+.project{
+	display: block;
+	background-color: #eceff1;
+	padding: 6%;
+	margin: 5%;
+	border: 2px;
+	border-color: #2E3440;
+	/* border-style: solid; */
+	border-radius: 8px;
+	box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.2);
+	transition: 0.25s;
+}
+
+.project:hover{
+	transform: translateY(-0.4rem);; 
+	box-shadow: 0 1rem 3rem rgb(0, 0, 0, 0.4)
+}
+
+.icon:hover{
+	color: #434c5e;
 }
