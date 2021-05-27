@@ -48,7 +48,7 @@ html, body {
 /* Main banner */
 .main {
 	font-family: 'Rubik', sans-serif;
-	padding: 15% 10%; /* Center contents within the container, make background image cover*/
+	padding: 15% 5% 10% 10%; /* Center contents within the container, make background image cover*/
 }
 #name {
 	font-size: 90pt;	
@@ -68,7 +68,7 @@ html, body {
 
 .about {
 	font-family: 'Rubik', sans-serif;
-	padding: 3% 20%;
+	padding: 0 20% 10% 20%;
 	/* background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94)); */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -90,14 +90,15 @@ html, body {
 
 
 .footer {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: #2E3440;
 	padding: 50px 0;
 }
 
 .facebook, .linkedin, .email-icon, .github, .dmoj {padding: 31%;}
 .footer img {
 	background-color: #8A8A8A;
+	color: white;
 	-webkit-transition: all 200ms ease-out;
 	-moz-transition: all 200ms ease-out;
 	-o-transition: all 200ms ease-out;
