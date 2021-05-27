@@ -48,7 +48,7 @@ html, body {
 /* Main banner */
 .main {
 	font-family: 'Rubik', sans-serif;
-	padding: 15% 5% 10% 10%; /* Center contents within the container, make background image cover*/
+	padding: 15% 20% 10% 20%; /* Center contents within the container, make background image cover*/
 }
 #name {
 	font-size: 90pt;	
@@ -66,9 +66,11 @@ html, body {
 	background-color: white;
 }
 
-.about {
+
+
+.about, .projects{
 	font-family: 'Rubik', sans-serif;
-	padding: 0 20% 10% 20%;
+	padding: 0 20% 5% 20%;
 	/* background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94)); */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -76,7 +78,7 @@ html, body {
 	text-align: center;
 }
 
-.about-header h1 {
+.section-header h1 {
 	font-size: 34pt;
 	margin-bottom: 40px;
 }
@@ -95,7 +97,7 @@ html, body {
 	padding: 50px 0;
 }
 
-.facebook, .linkedin, .email-icon, .github, .dmoj {padding: 31%;}
+.facebook, .linkedin, .email-icon, .github, .dmoj {padding: 50% 31% 31% 0;}
 .footer img {
 	background-color: #8A8A8A;
 	color: white;
@@ -109,20 +111,7 @@ html, body {
 .footer img:hover {background-color: white;}
 
 
-@media screen and (max-width: 769px){
-	/* HOME PAGE MOBILE STYLING*/
-	.summary {text-align: center;}
-	.summary img {
-		display: block;
-		margin: auto;
-		padding: 15%;
-	}
 
-	.projects {padding: 50px 0;}
-	.contact {padding: 50px 0;}
-	/* END HOME PAGE MOBILE STYLING*/
-
-}
 
 @media screen and (max-width: 550px){
 	/* HOME PAGE MOBILE STYLING*/
@@ -148,3 +137,7 @@ html, body {
 	color: #2E3440;
 
   }
+
+.row{
+	padding: 6%;
+}
