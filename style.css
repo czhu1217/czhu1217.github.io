@@ -159,7 +159,7 @@ html, body {
 
 .project:hover{
 	transform: translateY(-0.4rem);; 
-	box-shadow: 0 1rem 3rem rgb(0, 0, 0, 0.4)
+	box-shadow: 0 1rem 3rem rgb(0, 0, 0, 0.35)
 }
 
 .icon:hover{
